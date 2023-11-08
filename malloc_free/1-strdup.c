@@ -4,28 +4,28 @@
 
 /**
  * _strdup - duplicate to new memory space location
- * @str : char
+ * @str: char
  * Return: 0
  */
 
 char *_strdup(char *str)
 {
-	char *mlc;
-	int lon, compt;
+	char *aaa;
+	int i, r;
 
 	if (str == NULL)
 		return (NULL);
-	lon = 0;
-	while (str[lon] != '\n')
-		lon++;
+	i = 0;
+	while (str[i] != '\0')
+		i++;
 
-	mlc = malloc(sizeof(char) * (lon + 1));
+	aaa = malloc(sizeof(char) * (i + 1));
 
-	if (mlc == NULL)
+	if (aaa == NULL)
 		return (NULL);
 
-	for (compt = 0; str[compt]; compt++)
-		mlc[compt] = str[compt];
+	for (r = 0; str[r]; r++)
+		aaa[r] = str[r];
 
-	return (mlc);
+	return (aaa);
 }
