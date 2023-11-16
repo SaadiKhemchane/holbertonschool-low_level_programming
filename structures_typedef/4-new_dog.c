@@ -51,8 +51,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	/* Utiliser strdup pour copier les chaînes de caractères */
-	dog->name = strdup(name);
-	dog->owner = strdup(owner);
+	dog->name = _strdup(name);
+	dog->owner = _strdup(owner);
 
 	/* Vérifier si l'allocation de mémoire a réussi */
 	if (dog->name == NULL || dog->owner == NULL)
