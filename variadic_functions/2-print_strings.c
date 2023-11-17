@@ -4,7 +4,7 @@
 
 /**
  * print_strings - Prints strings, followed by a new line.
- * 
+ *
  * @separator: The string to be printed between strings.
  * @n: number of arguements.
  *
