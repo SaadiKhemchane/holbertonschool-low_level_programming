@@ -19,6 +19,27 @@ int open_source_file(char *filename)
 	}
 	return (fd);
 }
+
+/**
+ * open_destination_file - Opens the destination file for writing.
+ * @filename: Name of the destination to open
+ *
+ * Return: File descriptor if sucessful, -1 on error
+ */
+int open_destination_file(char *filename)
+{
+	int fd;
+
+	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR |
+			S_IRGRP | S_IWGRP | S_IROTH);
+	if (fd == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename);
+		exit(99);
+	}
+	return (fd);
+}
+
 /**
  * copy_file - Copies content from source file to destination file.
  * @src_fd: file descriptor of the ssource file
