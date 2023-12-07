@@ -12,6 +12,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int i = 0;
 	hash_node_t *new_node = NULL;
+	hash_node_t *node = NULL;
 
 	if (ht == NULL || key == NULL || *key == '\0')
 	{
